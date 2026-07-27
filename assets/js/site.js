@@ -1,6 +1,11 @@
 (function () {
   "use strict";
 
+  document.documentElement.classList.add("js");
+  const revealFallback = window.setTimeout(() => {
+    document.documentElement.classList.remove("js");
+  }, 2500);
+
   const body = document.body;
   const header = document.querySelector(".site-header");
   const menuToggle = document.querySelector(".menu-toggle");
@@ -30,7 +35,7 @@
     },
     booking: {
       title: "Outside bookings stay distinct from Branson group sales.",
-      description: "This path is reserved for presenters, corporate events and special engagements, with Greg Erickson’s management role represented accurately."
+      description: "This path is reserved for presenters, corporate events and special engagements, with Greg Ericson’s management role represented accurately."
     },
     directions: {
       title: "Maps, parking and arrival guidance belong here.",
@@ -180,5 +185,6 @@
 
   setHeaderState();
   revealSections();
+  window.clearTimeout(revealFallback);
   setActiveNavigation();
 })();
