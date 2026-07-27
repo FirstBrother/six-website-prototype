@@ -218,16 +218,23 @@ p {
   display: inline-flex;
   align-items: center;
   width: 184px;
-  height: 58px;
+  height: 50px;
+  overflow: hidden;
+  border: 1px solid rgba(242, 195, 85, 0.62);
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.22);
 }
 
 .brand img {
   width: 184px;
-  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.22));
+  height: 50px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .anniversary-logo {
-  mix-blend-mode: screen;
+  display: block;
 }
 
 .primary-nav {
@@ -610,34 +617,49 @@ p {
   right: -22px;
   top: -25px;
   z-index: 4;
-  width: 224px;
-  padding: 13px 14px 12px;
-  color: var(--white);
-  border: 1px solid rgba(242, 195, 85, 0.8);
-  background: #061621;
+  width: 246px;
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  align-items: center;
+  gap: 13px;
+  padding: 11px 14px 11px 11px;
+  color: var(--navy-900);
+  border: 1px solid rgba(170, 123, 19, 0.72);
+  background: #fff;
   box-shadow: var(--shadow);
   transform: rotate(3deg);
 }
 
-.legacy-card img,
+.legacy-card img {
+  width: 92px;
+  height: 92px;
+  object-fit: cover;
+  border: 1px solid rgba(170, 123, 19, 0.2);
+  background: #fff;
+}
+
 .legacy-card span {
   display: block;
-}
-
-.legacy-card img {
-  width: 100%;
-  height: auto;
-}
-
-.legacy-card span {
-  margin-top: 8px;
-  color: #f5d48a;
-  font-size: 0.63rem;
-  font-weight: 800;
-  line-height: 1.25;
-  letter-spacing: 0.08em;
-  text-align: center;
+  margin: 0;
+  color: #7b5812;
+  font-size: 0.64rem;
+  font-weight: 850;
+  line-height: 1.35;
+  letter-spacing: 0.09em;
+  text-align: left;
   text-transform: uppercase;
+}
+
+.legacy-card strong {
+  display: inline-block;
+  margin-top: 5px;
+  color: var(--navy-900);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+}
+
+.anniversary-logo--stacked {
+  height: auto;
 }
 
 .voice-stripes {
@@ -1381,7 +1403,7 @@ p {
 }
 
 .quote-mark {
-  height: 100px;
+  height: 92px;
   margin-top: 20px;
   color: var(--red);
   font-family: Georgia, serif;
@@ -1389,41 +1411,47 @@ p {
   line-height: 1;
 }
 
-.proof-medallion {
-  width: 90px;
-  height: 90px;
-  display: grid;
-  place-items: center;
-  margin-top: 30px;
-  border: 2px solid var(--green-deep);
-  border-radius: 50%;
-  color: var(--green-deep);
-  font-family: var(--heading);
-  font-size: 1.75rem;
-  transform: rotate(-7deg);
+.proof-card blockquote {
+  margin: auto 0 0;
 }
 
-.proof-number {
-  display: block;
-  height: 110px;
-  margin-top: 18px;
-  color: var(--blue);
+.proof-card blockquote p {
+  margin: 0;
+  color: var(--navy-900);
   font-family: var(--heading);
-  font-size: 7.5rem;
-  font-weight: 900;
-  line-height: 1;
-}
-
-.proof-card h3 {
-  margin-top: auto;
-  font-family: var(--heading);
-  font-size: 1.6rem;
+  font-size: clamp(1.4rem, 2vw, 1.75rem);
+  line-height: 1.08;
   text-transform: uppercase;
 }
 
-.proof-card p {
-  margin-bottom: 0;
-  font-size: 0.86rem;
+.proof-card blockquote footer {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.review-source {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  margin-top: 28px;
+  color: var(--navy-900);
+  font-size: 0.75rem;
+  font-weight: 850;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.review-source span {
+  transition: transform 0.2s ease;
+}
+
+.review-source:hover span,
+.review-source:focus-visible span {
+  transform: translate(3px, -3px);
 }
 
 .groups-section {
@@ -2117,7 +2145,24 @@ address span {
     top: -16px;
     right: -5px;
     width: 164px;
+    grid-template-columns: 64px 1fr;
+    gap: 9px;
     padding: 10px 11px 9px;
+  }
+
+  .legacy-card img {
+    width: 64px;
+    height: 64px;
+  }
+
+  .legacy-card span {
+    font-size: 0.5rem;
+    letter-spacing: 0.07em;
+  }
+
+  .legacy-card strong {
+    margin-top: 3px;
+    font-size: 0.58rem;
   }
 
   .play-card {
