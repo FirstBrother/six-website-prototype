@@ -29,3 +29,12 @@ representative.
   the year.
 - Do not overwrite these originals. Create separate derivatives for cropping,
   restoration, color correction, web optimization, or captioned treatments.
+
+## Private source notes and pending assets
+
+The local, unpublished `private-source-notes` folder preserves historical
+handoffs and contextual records that are not ready for public distribution.
+Its July 27, 2026, ChatGPT Classic handoff documents a 1975 photograph of an
+unidentified choreographer with Barry, Kevin, Lynn, Jak, Owen, Curtis, and
+Charles; the photograph and its restoration files are still pending attachment
+from Barry's iPhone.
