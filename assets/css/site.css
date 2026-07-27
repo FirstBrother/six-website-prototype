@@ -217,13 +217,17 @@ p {
 .brand {
   display: inline-flex;
   align-items: center;
-  width: 118px;
+  width: 184px;
   height: 58px;
 }
 
 .brand img {
-  width: 118px;
+  width: 184px;
   filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.22));
+}
+
+.anniversary-logo {
+  mix-blend-mode: screen;
 }
 
 .primary-nav {
@@ -606,32 +610,33 @@ p {
   right: -22px;
   top: -25px;
   z-index: 4;
-  width: 150px;
-  padding: 20px 18px;
-  color: var(--navy-950);
-  background: var(--gold);
+  width: 224px;
+  padding: 13px 14px 12px;
+  color: var(--white);
+  border: 1px solid rgba(242, 195, 85, 0.8);
+  background: #061621;
   box-shadow: var(--shadow);
   transform: rotate(3deg);
 }
 
-.legacy-card strong,
+.legacy-card img,
 .legacy-card span {
   display: block;
 }
 
-.legacy-card strong {
-  font-family: var(--heading);
-  font-size: 2.2rem;
-  letter-spacing: -0.03em;
-  line-height: 1;
-  text-transform: uppercase;
+.legacy-card img {
+  width: 100%;
+  height: auto;
 }
 
 .legacy-card span {
-  margin-top: 5px;
-  font-size: 0.7rem;
+  margin-top: 8px;
+  color: #f5d48a;
+  font-size: 0.63rem;
   font-weight: 800;
   line-height: 1.25;
+  letter-spacing: 0.08em;
+  text-align: center;
   text-transform: uppercase;
 }
 
@@ -2059,7 +2064,7 @@ address span {
 
   .brand,
   .brand img {
-    width: 92px;
+    width: 140px;
   }
 
   .primary-nav {
@@ -2111,12 +2116,8 @@ address span {
   .legacy-card {
     top: -16px;
     right: -5px;
-    width: 128px;
-    padding: 15px;
-  }
-
-  .legacy-card strong {
-    font-size: 1.8rem;
+    width: 164px;
+    padding: 10px 11px 9px;
   }
 
   .play-card {
