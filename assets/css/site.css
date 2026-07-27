@@ -217,20 +217,13 @@ p {
 .brand {
   display: inline-flex;
   align-items: center;
-  width: 184px;
-  height: 50px;
-  overflow: hidden;
-  border: 1px solid rgba(242, 195, 85, 0.62);
-  border-radius: 4px;
-  background: #fff;
-  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.22);
+  width: 118px;
+  height: 58px;
 }
 
 .brand img {
-  width: 184px;
-  height: 50px;
-  object-fit: cover;
-  object-position: center;
+  width: 118px;
+  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.22));
 }
 
 .anniversary-logo {
@@ -2092,7 +2085,7 @@ address span {
 
   .brand,
   .brand img {
-    width: 140px;
+    width: 92px;
   }
 
   .primary-nav {
